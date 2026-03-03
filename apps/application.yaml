@@ -6,15 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/dipakrasal2009/DevOps-Projects.git
-    targetRevision: HEAD
-    path: manifest
+    repoURL: https://github.com/miriamdomingo-next/argocd-test.git
+    targetRevision: main
+    path: apps/
   destination:
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: argocd
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true #si ya existe no lo crea
     automated:
       selfHeal: true
       prune: true
