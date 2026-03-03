@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-ip-viewer-app
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      app: ip-app
+  template:
+    metadata:
+      labels:
+        app: ip-app
+    spec:
+      containers:
+        - name: ip-app
+          image: dipakrasal2009/ip-viewer:latest
+          ports:
+            - containerPort: 80
