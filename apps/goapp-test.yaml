@@ -8,7 +8,7 @@ spec:
   source:
     repoURL:  https://github.com/miriamdomingo-next/goapp-test-argocd.git
     targetRevision: main
-    path: manifest/goapp-test
+    path: manifest/goapp-test/
   destination:
     server: https://kubernetes.default.svc
     namespace: goapp-test # Better to use a proper separated namespace
