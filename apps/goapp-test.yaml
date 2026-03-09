@@ -7,6 +7,7 @@ spec:
   project: default
   source:
     repoURL:  https://github.com/miriamdomingo-next/argocd-test
+    # needs to point to the repo where the manifests are
     #targetRevision: main - Asume esta o develop
     path: manifest/goapp-test/
   destination:
