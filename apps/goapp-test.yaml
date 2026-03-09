@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  https://github.com/miriamdomingo-next/goapp-test-argocd.git
-    targetRevision: main
+    repoURL:  https://github.com/miriamdomingo-next/goapp-test-argocd
+    #targetRevision: main - Asume esta o develop
     path: manifest/goapp-test/
   destination:
     server: https://kubernetes.default.svc
@@ -17,4 +17,5 @@ spec:
       - CreateNamespace=true #si ya existe no lo crea
     automated:
       selfHeal: true
-      prune: true
+      enabled: true
+

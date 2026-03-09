@@ -17,4 +17,4 @@ spec:
       - CreateNamespace=true #si ya existe no lo crea
     automated:
       selfHeal: true
-      prune: true
+      enabled: true
