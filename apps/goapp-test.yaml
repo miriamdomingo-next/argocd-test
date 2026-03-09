@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  https://github.com/miriamdomingo-next/goapp-test-argocd
+    repoURL:  https://github.com/miriamdomingo-next/argocd-test
     #targetRevision: main - Asume esta o develop
     path: manifest/goapp-test/
   destination:
