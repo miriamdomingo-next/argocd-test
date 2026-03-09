@@ -14,8 +14,9 @@ spec:
     namespace: goapp-test # Better to use a proper separated namespace
   syncPolicy:
     syncOptions:
-      - CreateNamespace=true #si ya existe no lo crea
+    - CreateNamespace=true #si ya existe no lo crea
     automated:
       selfHeal: true
+      prune: true
       enabled: true
 
