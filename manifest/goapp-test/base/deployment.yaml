@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goapp-test-deployment
+  labels:
+    app: goapp-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: goapp-test
+  template:
+    metadata:
+      labels:
+        app: goapp-test
+    spec:
+      containers:
+      - name: goapp-test
+        image: ghcr.io/miriamdomingo-next/goapp-test:latest
+        ports:
+        - containerPort: 5000

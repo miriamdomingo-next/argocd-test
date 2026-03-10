@@ -1,0 +1,26 @@
+# KUSTOMIZE OVERLAYS/DEV
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+patches:
+  - patch: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: goapp-test-kustomize
+      spec:
+        replicas: 3
+        containers:
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
+    target:
+      kind: Deployment
+      name: goapp-test-kustomize

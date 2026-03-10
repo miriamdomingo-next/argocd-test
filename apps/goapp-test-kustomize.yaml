@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: goapp-test
+  name: goapp-test-kustomize
   namespace: argocd
 spec:
   project: default
@@ -9,10 +9,10 @@ spec:
     repoURL:  https://github.com/miriamdomingo-next/argocd-test
     # needs to point to the repo where the manifests are
     #targetRevision: main - Asume esta o develop
-    path: manifest/goapp-test/base
+    path: manifest/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: goapp-test # Better to use a proper separated namespace
+    namespace: goapp-test-kustomize # Better to use a proper separated namespace
   syncPolicy:
     syncOptions:
     - CreateNamespace=true #si ya existe no lo crea
