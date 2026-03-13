@@ -9,7 +9,7 @@ spec:
     repoURL:  https://github.com/miriamdomingo-next/argocd-test
     # needs to point to the repo where the manifests are
     #targetRevision: main - Asume esta o develop
-    path: manifest/overlays/dev
+    path: manifest/goapp-test-kustomize/overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: goapp-test-kustomize # Better to use a proper separated namespace
