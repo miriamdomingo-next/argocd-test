@@ -7,20 +7,23 @@ resources:
 
 patches:
 - patch: |
-   apiVersion: apps/v1
+    apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: goapp-test-kustomize-deployment
     spec:
       replicas: 3
-      containers:
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "200m"
+      template:
+        spec:
+          containers:
+          - name: goapp-test-kustomize-container  # You need to specify the container name
+            resources:
+              requests:
+                memory: "128Mi"
+                cpu: "100m"
+              limits:
+                memory: "256Mi"
+                cpu: "200m"
   target:
     kind: Deployment
     name: goapp-test-kustomize-deployment
