@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: goapp-test-kustomize
+        author: miri
     spec:
       containers:
       - name: goapp-test-kustomize
