@@ -10,7 +10,7 @@ patches:
       apiVersion: apps/v1
       kind: Deployment
       metadata:
-        name: goapp-test-kustomize
+        name: goapp-test-kustomize-kustomize
       spec:
         replicas: 3
         containers:
@@ -23,4 +23,4 @@ patches:
               cpu: "200m"
     target:
       kind: Deployment
-      name: goapp-test-kustomize
+      name: goapp-test-kustomize-kustomize
