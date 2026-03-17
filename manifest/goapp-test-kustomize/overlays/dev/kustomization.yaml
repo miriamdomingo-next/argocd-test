@@ -16,7 +16,7 @@ patches:
       template:
         spec:
           containers:
-          - name: goapp-test-kustomize-container  # You need to specify the container name
+          - name: dev-kustomize-goapp-test-kustomize-deployment-789664674d-vbdkp
             resources:
               requests:
                 memory: "128Mi"
