@@ -1,20 +1,29 @@
-# argocd-test
-    Repositorio creado durante el periodo de formación, para documentar avances en conocimiento, realizar testeos en servidor local (minikube), guardar un backup de los despliegues etc. 
+# ArgoCD
+Repositorio creado durante el periodo de formación, con el objetivo de documentar avances en conocimiento, realizar testeos en servidor local (minikube), guardar un backup de los despliegues etc. 
 
 ## organización
 ``` 
 ├── README.md
 ├── apps
-│   ├── application.yaml -- App of apps
-│   └── goapp-test.yaml -- Segunda app - Servidor web Golang - "Hello World"
+│   ├── application.yaml
+│   ├── goapp-test-kustomize.yaml
+│   └── goapp-test.yaml
 └── manifest
-    └── goapp-test -- Segunda app (Primera desplegada "auto" con ArgoCD)
-        ├── deployment.yaml
-        ├── kustomization.yaml
-        ├── service.yaml
-        └── overlays -- Despliegue específico con Kustomization
+    ├── goapp-test
+    │   ├── base
+    │   │   ├── deployment.yaml
+    │   │   └── service.yaml
+    │   └── overlays
+    │       └── dev
+    └── goapp-test-kustomize
+        ├── base
+        │   ├── deployment.yaml
+        │   ├── kustomization.yaml
+        │   └── service.yaml
+        └── overlays
             └── dev
                 └── kustomization.yaml
+
 
 ```
 

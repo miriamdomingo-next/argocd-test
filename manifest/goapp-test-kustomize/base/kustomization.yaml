@@ -9,5 +9,4 @@ resources:
 commonLabels:
   author: miri
 
-namePrefix: dev-
-nameSuffix: ""
+namePrefix: dev-kustomize-

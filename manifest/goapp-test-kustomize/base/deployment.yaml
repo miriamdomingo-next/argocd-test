@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: goapp-test-deployment
+  name: goapp-test-kustomize-deployment
   labels:
-    app: goapp-test
+    app: goapp-test-kustomize
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: goapp-test
+      app: goapp-test-kustomize
   template:
     metadata:
       labels:
-        app: goapp-test
+        app: goapp-test-kustomize
     spec:
       containers:
-      - name: goapp-test
+      - name: goapp-test-kustomize
         image: ghcr.io/miriamdomingo-next/goapp-test:latest
         ports:
         - containerPort: 5000
